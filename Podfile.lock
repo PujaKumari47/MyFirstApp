@@ -19,6 +19,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - HubFramework (2.0.9)
   - Mixpanel-swift (2.1.4)
   - ObjectMapper (2.2.5)
 
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Crashlytics
   - Google/Analytics
+  - HubFramework
   - Mixpanel-swift
   - ObjectMapper
 
@@ -39,9 +41,10 @@ SPEC CHECKSUMS:
   Google: 813c467362eabc11385f5a5cc9ad0cb651a58f4e
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  HubFramework: 8bd275dc0362755771bf36fb7b33bc45f25144f0
   Mixpanel-swift: 02c76c6ff25cac461eabb4d47365aab1681fb5d9
   ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
 
-PODFILE CHECKSUM: 79f2481ea3764d0b002f2a30873dd4c4077b97d0
+PODFILE CHECKSUM: 161a82c807cd1fed4501bc3822ed36d2cb5e79b5
 
 COCOAPODS: 1.2.0

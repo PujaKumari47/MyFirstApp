@@ -7,6 +7,7 @@ pod 'Google/Analytics'
 pod 'ObjectMapper'
 pod 'Crashlytics'
 pod 'Mixpanel-swift'
+pod 'HubFramework'
 end
 post_install do |installer|
 installer.pods_project.targets.each do |target|

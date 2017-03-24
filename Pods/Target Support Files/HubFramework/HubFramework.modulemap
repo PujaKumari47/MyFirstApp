@@ -1,0 +1,6 @@
+framework module HubFramework {
+  umbrella header "HubFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}

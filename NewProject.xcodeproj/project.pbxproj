@@ -20,6 +20,7 @@
 		E863BEAE1E81010C00EC779F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863BEAD1E81010C00EC779F /* SecondViewController.swift */; };
 		E863BEB01E81021900EC779F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863BEAF1E81021900EC779F /* BaseViewController.swift */; };
 		E863BEB61E81081B00EC779F /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863BEB51E81081B00EC779F /* Segue.swift */; };
+		E8BC044E1E8559E800417D66 /* KolodaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8BC044D1E8559E800417D66 /* KolodaView.xib */; };
 		E8FC7AE61E826E2F0021F420 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FC7AE51E826E2F0021F420 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		E863BEAD1E81010C00EC779F /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E863BEAF1E81021900EC779F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E863BEB51E81081B00EC779F /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		E8BC044D1E8559E800417D66 /* KolodaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KolodaView.xib; sourceTree = "<group>"; };
 		E8FC7AE51E826E2F0021F420 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +180,7 @@
 		E863BEB31E8102FC00EC779F /* ViewsInterface */ = {
 			isa = PBXGroup;
 			children = (
+				E8BC044D1E8559E800417D66 /* KolodaView.xib */,
 			);
 			path = ViewsInterface;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BC044E1E8559E800417D66 /* KolodaView.xib in Resources */,
 				E863BE911E80FF0A00EC779F /* LaunchScreen.storyboard in Resources */,
 				E863BE8E1E80FF0A00EC779F /* Assets.xcassets in Resources */,
 				E863BE8C1E80FF0A00EC779F /* Main.storyboard in Resources */,

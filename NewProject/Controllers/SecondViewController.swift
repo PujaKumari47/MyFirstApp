@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController:BaseViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class SecondViewController:UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
     
     @IBOutlet weak var dressCollectionView: UICollectionView!

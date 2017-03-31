@@ -1,3 +1,4 @@
+
 //
 //  constants.swift
 //  NewProject
@@ -12,4 +13,4 @@ import Foundation
 
 
 //Token for Mixpanel inetgration
-let kMixpanelToken: String = NSBundle.mainBundle().infoDictionary!["MIXPANEL_TOKEN"] as! String
+let kMixpanelToken: String = Bundle.main.infoDictionary!["MIXPANEL_TOKEN"] as! String

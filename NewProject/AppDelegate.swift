@@ -52,32 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Mixpanel Integration
             Mixpanel.initialize(token: kMixpanelToken)
             
-            // setup logging framework
-            log.setup(
-                .Verbose,
-                showThreadName: true,
-                showLogLevel: true,
-                showFileNames: true,
-                showLineNumbers: true,
-                writeToFile: nil,
-                fileLogLevel: .Verbose)
-            
-            // Intialize Crashlytics
-            Fabric.with([Crashlytics.self])
-            
-            // Google analytics configuration
-            // Configure tracker from GoogleService-Info.plist.
-            var configureError: NSError?
-            GGLContext.sharedInstance().configureWithError(&configureError)
-            assert(configureError == nil, "Error configuring Google services: \(configureError)")
-            
-            // Optional: configure GAI options.
-            let gai = GAI.sharedInstance()
-            gai.trackUncaughtExceptions = true  // report uncaught exceptions
-            gai.logger.logLevel = GAILogLevel.Warning  // remove before app release
-        }
-
-
+      
 
 }
 
+}

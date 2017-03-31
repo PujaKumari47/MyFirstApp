@@ -160,7 +160,7 @@
                                         <rect key="frame" x="0.0" y="28" width="276" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2t7-zT-buX" id="1P4-tL-PeO">
-                                            <rect key="frame" x="0.0" y="0.0" width="276" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="276" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jsm-JW-Dhu">
@@ -240,7 +240,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pU-r0-QYv" id="CLX-3g-wCB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="summerDress" translatesAutoresizingMaskIntoConstraints="NO" id="52r-2P-Avp">
@@ -309,7 +309,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teG-Qt-vvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3812" y="90"/>
+            <point key="canvasLocation" x="3782" y="69"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Fxz-7s-fb2">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="WzH-3g-jhL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3F-Nh-B3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4428" y="69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fCT-Vu-zwJ">

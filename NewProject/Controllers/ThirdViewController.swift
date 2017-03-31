@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
+class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     @IBOutlet weak var dressTableView: UITableView!

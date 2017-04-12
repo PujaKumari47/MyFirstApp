@@ -12,6 +12,7 @@
 		E81F21A01E83CEF2009D2A5B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F219F1E83CEF2009D2A5B /* TableViewCell.swift */; };
 		E81F21A21E840218009D2A5B /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F21A11E840218009D2A5B /* constants.swift */; };
 		E81F21A41E8402A4009D2A5B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F21A31E8402A4009D2A5B /* Endpoint.swift */; };
+		E8243E231E9E5C8400A107C2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8243E221E9E5C8400A107C2 /* NetworkManager.swift */; };
 		E863BE871E80FF0A00EC779F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863BE861E80FF0A00EC779F /* AppDelegate.swift */; };
 		E863BE8C1E80FF0A00EC779F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E863BE8A1E80FF0A00EC779F /* Main.storyboard */; };
 		E863BE8E1E80FF0A00EC779F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E863BE8D1E80FF0A00EC779F /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		E863BEAE1E81010C00EC779F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863BEAD1E81010C00EC779F /* SecondViewController.swift */; };
 		E863BEB01E81021900EC779F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863BEAF1E81021900EC779F /* BaseViewController.swift */; };
 		E863BEB61E81081B00EC779F /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863BEB51E81081B00EC779F /* Segue.swift */; };
+		E8A2821D1E9CFFCA00B015BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2821C1E9CFFCA00B015BE /* User.swift */; };
 		E8BC044E1E8559E800417D66 /* KolodaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8BC044D1E8559E800417D66 /* KolodaView.xib */; };
 		E8FC7AE61E826E2F0021F420 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FC7AE51E826E2F0021F420 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,7 @@
 		E81F219F1E83CEF2009D2A5B /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E81F21A11E840218009D2A5B /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		E81F21A31E8402A4009D2A5B /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E8243E221E9E5C8400A107C2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E863BE831E80FF0A00EC779F /* NewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E863BE861E80FF0A00EC779F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E863BE8B1E80FF0A00EC779F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		E863BEAD1E81010C00EC779F /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E863BEAF1E81021900EC779F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E863BEB51E81081B00EC779F /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		E8A2821C1E9CFFCA00B015BE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8BC044D1E8559E800417D66 /* KolodaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KolodaView.xib; sourceTree = "<group>"; };
 		E8FC7AE51E826E2F0021F420 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +162,7 @@
 				E863BEAF1E81021900EC779F /* BaseViewController.swift */,
 				E8FC7AE51E826E2F0021F420 /* MenuViewController.swift */,
 				E81F219B1E83CA13009D2A5B /* ThirdViewController.swift */,
+				E8243E221E9E5C8400A107C2 /* NetworkManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 		E863BEB11E8102B600EC779F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				E8A2821C1E9CFFCA00B015BE /* User.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -353,10 +359,12 @@
 				E81F21A41E8402A4009D2A5B /* Endpoint.swift in Sources */,
 				E8FC7AE61E826E2F0021F420 /* MenuViewController.swift in Sources */,
 				E863BE871E80FF0A00EC779F /* AppDelegate.swift in Sources */,
+				E8243E231E9E5C8400A107C2 /* NetworkManager.swift in Sources */,
 				E863BEB01E81021900EC779F /* BaseViewController.swift in Sources */,
 				E81F219C1E83CA13009D2A5B /* ThirdViewController.swift in Sources */,
 				E81F21A01E83CEF2009D2A5B /* TableViewCell.swift in Sources */,
 				E863BEB61E81081B00EC779F /* Segue.swift in Sources */,
+				E8A2821D1E9CFFCA00B015BE /* User.swift in Sources */,
 				E81F21A21E840218009D2A5B /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +503,7 @@
 			baseConfigurationReference = E31FDB1D24D021C391503049 /* Pods-NewProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NewProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -509,6 +518,7 @@
 			baseConfigurationReference = 9375E24B0104E83896F21875 /* Pods-NewProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NewProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

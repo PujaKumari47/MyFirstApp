@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -16,14 +18,51 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     var numbersDress = ["tops","kurta","saree","suit","Lehenga"]
     var i:Int = 0
     var j = 0
+    var response : JSON = nil
+    var user : [User] = []
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dressTableView.delegate = self
-        self.dressTableView.dataSource = self
+        
+        let url = NSURL(string: "http://jsonplaceholder.typicode.com/users")
+        var  request = URLRequest(url: url! as URL)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        Alamofire.request(request).responseJSON { response in
+    
+            switch response.result {
+             
+            case .success(let data):
+                self.dressTableView.delegate = self
+                self.dressTableView.dataSource = self
+                self.response = JSON (data)
+                
+                for i in 0..<self.response.count {
+                    let singleUser = User(userJson:self.response[i])
+                    self.user.append(singleUser)
+                    
+                }
+                
+                
+                
+                
+            print (data)
+                
+                
+            case.failure(let error):
+                print("error",error)
+                
+                
+            }
+        
+        
+        }
+        
+        
+        
         //self.addSlideMenuButton()
 
        
@@ -36,11 +75,11 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return 10
+     return user.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 120
     }
     
     
@@ -49,11 +88,13 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let cell = self.dressTableView.dequeueReusableCell(withIdentifier: cellIdentifier,
                                                            for: indexPath) as! TableViewCell
         cell.dressImageView.image = UIImage(named: "summerDress")
+        let myUser = self.user[indexPath.row]
         
-        cell.descriptionLabel.text = numbersDress[0]
+        cell.descriptionLabel.text = myUser.name
+        cell.emailLabel.text = myUser.email
+        cell.idLabel.text = myUser.id
         
-        
-        
+                
         
         return cell
         

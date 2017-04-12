@@ -8,6 +8,7 @@ pod 'ObjectMapper'
 pod 'Crashlytics'
 pod 'Mixpanel-swift'
 pod 'HubFramework'
+pod 'SwiftyJSON'
 end
 post_install do |installer|
 installer.pods_project.targets.each do |target|

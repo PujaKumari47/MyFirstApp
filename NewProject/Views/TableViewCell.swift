@@ -12,10 +12,9 @@ class TableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var dressImageView: UIImageView!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

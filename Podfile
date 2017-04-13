@@ -9,6 +9,9 @@ pod 'Crashlytics'
 pod 'Mixpanel-swift'
 pod 'HubFramework'
 pod 'SwiftyJSON'
+pod 'lottie-ios'
+pod 'AlamofireObjectMapper', '~> 4.0'
+
 end
 post_install do |installer|
 installer.pods_project.targets.each do |target|

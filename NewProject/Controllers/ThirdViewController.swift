@@ -9,8 +9,11 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Lottie
+
 
 class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    var moneyListArray: [UserMapper] = [UserMapper]()
     
     
     @IBOutlet weak var dressTableView: UITableView!
@@ -27,46 +30,76 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: "http://jsonplaceholder.typicode.com/users")
-        var  request = URLRequest(url: url! as URL)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        Alamofire.request(request).responseJSON { response in
-    
-            switch response.result {
-             
-            case .success(let data):
-                self.dressTableView.delegate = self
-                self.dressTableView.dataSource = self
-                self.response = JSON (data)
-                
-                for i in 0..<self.response.count {
-                    let singleUser = User(userJson:self.response[i])
-                    self.user.append(singleUser)
-                    
-                }
-                
-                
-                
-                
-            print (data)
-                
-                
-            case.failure(let error):
-                print("error",error)
-                
-                
-            }
+        getAmountFromServer()
+        
+//        let url = NSURL(string: "http://jsonplaceholder.typicode.com/users")
+//        var  request = URLRequest(url: url! as URL)
+//        request.httpMethod = "GET"
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        Alamofire.request(request).responseJSON { response in
+//    
+//            switch response.result {
+//             
+//            case .success(let data):
+//                self.dressTableView.delegate = self
+//                self.dressTableView.dataSource = self
+//                self.response = JSON (data)
+//                
+//                for i in 0..<self.response.count {
+//                    let singleUser = User(userJson:self.response[i])
+//                    self.user.append(singleUser)
+//                    
+//                }
+//                
+//                
+//                
+//                
+//            print (data)
+//                
+//                
+//            case.failure(let error):
+//                print("error",error)
+//                
+//                
+//            }
         
         
         }
         
+        func getAmountFromServer() {
+            
+           
+            NetworkManager.sharedInstance.getMoney(completion: { (response) in
+                switch response.result {
+                case .Success:
+                    if let responseValue = response.result.value as? NSDictionary {
+                        if let status = responseValue["status"] as? String {
+                            if status == "success" {
+                                
+                                 if let data = responseValue["data"] as? NSArray {
+                                    if let AmountList = Mapper<UserMapper>().mapArray(data) {
+                                    self.moneyListArray = AmountList
+                                    self.dressTableView.delegate = self
+                                    self.dressTableView.dataSource = self
+                                    self.dressTableView.reloadData()
+                                    
+                                }
+                            }
+                            }
+                        }else {
+                            
+                        }
+                    }
+                    break
+                case .Failure(_): break
+                    
+                }
+            })
+        }
         
         
-        //self.addSlideMenuButton()
+    
 
-       
-    }
     
    // TableView delegate and data source Methods
      func numberOfSections(in tableView: UITableView) -> Int {
@@ -75,7 +108,7 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return user.count
+     return moneyListArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -88,11 +121,12 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let cell = self.dressTableView.dequeueReusableCell(withIdentifier: cellIdentifier,
                                                            for: indexPath) as! TableViewCell
         cell.dressImageView.image = UIImage(named: "summerDress")
-        let myUser = self.user[indexPath.row]
+        let myUser = self.moneyListArray[indexPath.row]
         
         cell.descriptionLabel.text = myUser.name
-        cell.emailLabel.text = myUser.email
-        cell.idLabel.text = myUser.id
+        cell.emailLabel.text = String(myUser.id)
+        
+     
         
                 
         
@@ -116,3 +150,4 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
   
 
 }
+
